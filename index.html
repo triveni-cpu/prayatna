@@ -3,74 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UPSC News Dashboard</title>
+  <title>UPSC News Dashboard (Insights + PIB)</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f0f0f5; padding: 30px; }
-    h1 { color: #2e3b55; margin-bottom: 10px; }
-    h2 { color: #333; margin-top: 40px; }
-    .news { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    h1 { color: #2e3b55; }
+    .news { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 30px; }
     .news-item { margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
     .news-item a { text-decoration: none; color: #0066cc; font-weight: bold; }
     .news-item p { color: #555; font-size: 14px; margin-top: 5px; }
   </style>
 </head>
 <body>
-  <h1>📰 UPSC Auto-Updating News Dashboard</h1>
-
+  <h1>📰 UPSC News Dashboard</h1>
+  
   <div class="news">
     <h2>🔍 InsightsIAS</h2>
     <div id="insights"></div>
   </div>
 
   <div class="news">
-    <h2>🏛 PIB (Press Information Bureau)</h2>
+    <h2>🏛 PIB</h2>
     <div id="pib"></div>
-  </div>
-
-  <div class="news">
-    <h2>📜 PRS India</h2>
-    <div id="prs"></div>
-  </div>
-
-  <div class="news">
-    <h2>📊 NITI Aayog</h2>
-    <div id="niti"></div>
   </div>
 
   <script>
     async function loadFeed(containerId, feedUrl) {
       try {
         const apiUrl = https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)};
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, "text/xml");
-        const items = xml.querySelectorAll("item");
+        const res = await fetch(apiUrl);
+        const json = await res.json();
+        const xml = new DOMParser().parseFromString(json.contents, 'text/xml');
+        const items = xml.querySelectorAll('item');
         const container = document.getElementById(containerId);
-        container.innerHTML = "";
+        container.innerHTML = '';
 
-        for (let i = 0; i < 5 && i < items.length; i++) {
-          const item = items[i];
-          const title = item.querySelector("title").textContent;
-          const link = item.querySelector("link").textContent;
-          const pubDate = item.querySelector("pubDate")?.textContent || "";
-
-          const div = document.createElement("div");
-          div.className = "news-item";
-          div.innerHTML = <a href="${link}" target="_blank">${title}</a><p><small>${pubDate}</small></p>;
-          container.appendChild(div);
-        }
-      } catch (e) {
-        document.getElementById(containerId).innerHTML = "<p style='color:red;'>Failed to load news.</p>";
-        console.error("Error loading feed:", e);
-      }
-    }
-
-    // Load feeds
-    loadFeed("insights", "https://www.insightsonindia.com/feed/");
-    loadFeed("pib", "https://pib.gov.in/rss/rssfeed2.xml");
-    loadFeed("prs", "https://prsindia.org/media/rss-feed");
-    loadFeed("niti", "https://www.niti.gov.in/rss.xml");
-  </script>
-</body>
-</html>
+        Array.from(items).slice(0,5).forEach(item => {
+          const title = item.querySelector('title')?.textContent || '';
+          const link = item.querySelector('link')?.textContent || '';
+          const pubDate = item.querySelector('pubDate')?.textContent || '';
+          const div = document.createElement('div');
+          div.className = 'news-item
