@@ -1,73 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>UPSC News - InsightsIAS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest UPSC News - InsightsIAS</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
       padding: 20px;
+      background: #f0f8ff;
     }
-
-    .news-source {
-      margin-bottom: 40px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    }
-
     h1 {
-      color: #2c3e50;
+      color: #002855;
     }
-
-    h3 {
-      margin: 10px 0;
-    }
-
-    a {
-      color: #2980b9;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
     .error {
       color: red;
     }
   </style>
 </head>
 <body>
-
   <h1>Latest UPSC News - InsightsIAS</h1>
-
-  <div class="news-source" id="insights-news">
-    <p>Loading news...</p>
-  </div>
+  <div id="insights-news">Loading...</div>
 
   <script>
-    fetch('https://rss2json.io/api/rss?url=https://www.insightsonindia.com/feed/')
+    const url = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.insightsonindia.com/feed/");
+
+    fetch(url)
       .then(response => response.json())
       .then(data => {
-        let html = '';
-        data.items.slice(0, 5).forEach(item => {
-          html += `
-            <div style="margin-bottom:20px">
-              <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-              <p>${item.description}</p>
-            </div>`;
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, "text/xml");
+        const items = xml.querySelectorAll("item");
+        let html = "";
+
+        items.forEach((item, index) => {
+          if (index < 5) {
+            const title = item.querySelector("title").textContent;
+            const link = item.querySelector("link").textContent;
+            const pubDate = item.querySelector("pubDate").textContent;
+            html += `
+              <div style="margin-bottom:20px">
+                <h3><a href="${link}" target="_blank">${title}</a></h3>
+                <p>${pubDate.split(" ")[0]}</p>
+              </div>`;
+          }
         });
-        document.getElementById('insights-news').innerHTML = html;
+
+        document.getElementById("insights-news").innerHTML = html;
       })
       .catch(error => {
-        document.getElementById('insights-news').innerHTML = '<p class="error">Error loading feed.</p>';
-        console.error(error);
+        console.error("Feed load error:", error);
+        document.getElementById("insights-news").innerHTML = <p class="error">Error loading feed.</p>;
       });
   </script>
-
 </body>
 </html>
