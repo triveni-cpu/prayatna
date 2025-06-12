@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Latest UPSC News - InsightsIAS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      color: #002855;
+    }
+    .error {
+      color: red;
+    }
+    .loader {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Latest UPSC News - InsightsIAS</h1>
+  <div id="insights-news">
+    <div class="loader">Loading...</div>
+  </div>
+
+  <script>
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.insightsonindia.com/feed/')
+      .then(response => response.json())
+      .then(data => {
+        let html = '';
+        data.items.slice(0, 5).forEach(item => {
+          html += `
+            <div style="margin-bottom:20px">
+              <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+              <p>${item.pubDate.split(' ')[0]}</p>
+            </div>`;
+        });
+        document.getElementById('insights-news').innerHTML = html;
+      })
+      .catch(error => {
+        document.getElementById('insights-news').innerHTML = <p class="error">Error loading feed.</p>;
+      });
+  </script>
+</body>
+</html>
