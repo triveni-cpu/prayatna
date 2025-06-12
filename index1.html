@@ -3,47 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest UPSC News - InsightsIAS</title>
+  <title>UPSC Dashboard - InsightsIAS News</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
-      background: #f9f9f9;
+      background-color: #f2f2f2;
     }
     h1 {
-      color: #002855;
+      color: #2c3e50;
     }
-    .error {
-      color: red;
+    .news-item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .loader {
+    .news-item h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .news-item p {
       color: #555;
     }
   </style>
 </head>
 <body>
   <h1>Latest UPSC News - InsightsIAS</h1>
-  <div id="insights-news">
-    <div class="loader">Loading...</div>
-  </div>
+  <div id="insights-news">Loading news...</div>
 
   <script>
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.insightsonindia.com/feed/')
       .then(response => response.json())
       .then(data => {
-        let html = '';
+        const container = document.getElementById('insights-news');
+        container.innerHTML = '';
         data.items.slice(0, 5).forEach(item => {
-          html += `
-            <div style="margin-bottom:20px">
-              <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-              <p>${item.pubDate.split(' ')[0]}</p>
-            </div>`;
+          const div = document.createElement('div');
+          div.className = 'news-item';
+          div.innerHTML = `
+            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+            <p>${item.pubDate.split(' ')[0]}</p>
+            <p>${item.contentSnippet}</p>
+          `;
+          container.appendChild(div);
         });
-        document.getElementById('insights-news').innerHTML = html;
       })
       .catch(error => {
-        document.getElementById('insights-news').innerHTML = <p class="error">Error loading feed.</p>;
+        document.getElementById('insights-news').innerHTML = '<p style="color:red">Error loading feed. Try again later.</p>';
       });
   </script>
 </body>
-</html>
+</html>     
