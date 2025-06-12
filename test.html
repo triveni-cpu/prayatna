@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Insights Fetch</title>
+</head>
+<body>
+  <h2>InsightsIAS Feed (Test)</h2>
+  <pre id="output">Loading…</pre>
+
+  <script>
+    fetch('https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.insightsonindia.com/feed/'))
+      .then(response => response.text())
+      .then(data => {
+        // Just show first part of response
+        document.getElementById('output').textContent = data.slice(0, 1000) + '…';
+      })
+      .catch(error => {
+        document.getElementById('output').textContent = 'Fetch error: ' + error;
+      });
+  </script>
+</body>
+</html>
