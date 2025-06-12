@@ -3,43 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UPSC News Dashboard (Insights + PIB)</title>
+  <title>UPSC Dashboard - InsightsIAS News</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f0f0f5; padding: 30px; }
-    h1 { color: #2e3b55; }
-    .news { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 30px; }
-    .news-item { margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-    .news-item a { text-decoration: none; color: #0066cc; font-weight: bold; }
-    .news-item p { color: #555; font-size: 14px; margin-top: 5px; }
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .news-item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .news-item h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .news-item p {
+      color: #555;
+    }
   </style>
 </head>
 <body>
-  <h1>📰 UPSC News Dashboard</h1>
-  
-  <div class="news">
-    <h2>🔍 InsightsIAS</h2>
-    <div id="insights"></div>
-  </div>
-
-  <div class="news">
-    <h2>🏛 PIB</h2>
-    <div id="pib"></div>
-  </div>
+  <h1>Latest UPSC News - InsightsIAS</h1>
+  <div id="insights-news">Loading news...</div>
 
   <script>
-    async function loadFeed(containerId, feedUrl) {
-      try {
-        const apiUrl = https://api.allorigins.win/get?url=${encodeURIComponent(feedUrl)};
-        const res = await fetch(apiUrl);
-        const json = await res.json();
-        const xml = new DOMParser().parseFromString(json.contents, 'text/xml');
-        const items = xml.querySelectorAll('item');
-        const container = document.getElementById(containerId);
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.insightsonindia.com/feed/')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('insights-news');
         container.innerHTML = '';
-
-        Array.from(items).slice(0,5).forEach(item => {
-          const title = item.querySelector('title')?.textContent || '';
-          const link = item.querySelector('link')?.textContent || '';
-          const pubDate = item.querySelector('pubDate')?.textContent || '';
+        data.items.slice(0, 5).forEach(item => {
           const div = document.createElement('div');
-          div.className = 'news-item
+          div.className = 'news-item';
+          div.innerHTML = `
+            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+            <p>${item.pubDate.split(' ')[0]}</p>
+            <p>${item.contentSnippet}</p>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('insights-news').innerHTML = '<p style="color:red">Error loading feed. Try again later.</p>';
+      });
+  </script>
+</body>
+</html>     
