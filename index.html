@@ -1,57 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Latest UPSC News - InsightsIAS</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-      background: #f0f8ff;
-    }
-    h1 {
-      color: #002855;
-    }
-    .error {
-      color: red;
-    }
-  </style>
-</head>
-<body>
-  <h1>Latest UPSC News - InsightsIAS</h1>
-  <div id="insights-news">Loading...</div>
-
-  <script>
-    const url = "https://api.allorigins.win/get?url=" + encodeURIComponent("https://www.insightsonindia.com/feed/");
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(data.contents, "text/xml");
-        const items = xml.querySelectorAll("item");
-        let html = "";
-
-        items.forEach((item, index) => {
-          if (index < 5) {
-            const title = item.querySelector("title").textContent;
-            const link = item.querySelector("link").textContent;
-            const pubDate = item.querySelector("pubDate").textContent;
-            html += `
-              <div style="margin-bottom:20px">
-                <h3><a href="${link}" target="_blank">${title}</a></h3>
-                <p>${pubDate.split(" ")[0]}</p>
-              </div>`;
-          }
-        });
-
-        document.getElementById("insights-news").innerHTML = html;
-      })
-      .catch(error => {
-        console.error("Feed load error:", error);
-        document.getElementById("insights-news").innerHTML = <p class="error">Error loading feed.</p>;
-      });
-  </script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8">
+    <title>upsc dashboard</title></head>
+  <body>
+    <h1>hello welcome to my page</h1>
+  </body>
+  </head>
