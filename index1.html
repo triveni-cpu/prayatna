@@ -1,58 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>UPSC Dashboard - InsightsIAS News</title>
+  <meta charset="UTF-8">
+  <title>PIB Auto-Updating News</title>
   <style>
     body {
       font-family: Arial, sans-serif;
+      background: #f8f9fa;
       padding: 20px;
-      background-color: #f2f2f2;
     }
     h1 {
-      color: #2c3e50;
+      color: #333;
+    }
+    .news-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .news-item {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
     }
-    .news-item h3 {
-      margin: 0;
-      font-size: 18px;
+    .news-item a {
+      color: #0056b3;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .news-item a:hover {
+      text-decoration: underline;
     }
     .news-item p {
       color: #555;
+      font-size: 14px;
+      margin-top: 5px;
     }
   </style>
 </head>
 <body>
-  <h1>Latest UPSC News - InsightsIAS</h1>
-  <div id="insights-news">Loading news...</div>
+
+  <div class="news-box">
+    <h1>📰 Latest PIB News</h1>
+    <div id="pib-news">Loading news...</div>
+  </div>
 
   <script>
-    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.insightsonindia.com/feed/')
-      .then(response => response.json())
-      .then(data => {
-        const container = document.getElementById('insights-news');
-        container.innerHTML = '';
-        data.items.slice(0, 5).forEach(item => {
-          const div = document.createElement('div');
-          div.className = 'news-item';
-          div.innerHTML = `
-            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
-            <p>${item.pubDate.split(' ')[0]}</p>
-            <p>${item.contentSnippet}</p>
-          `;
-          container.appendChild(div);
+    async function loadPIBNews() {
+      const apiUrl = 'https://api.allorigins.win/get?url=' + encodeURIComponent('https://pib.gov.in/rss/rssfeed2.xml');
+      
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(data.contents, "text/xml");
+        const items = xml.querySelectorAll("item");
+
+        let html = '';
+        items.forEach((item, index) => {
+          if (index < 5) {
+            const title = item.querySelector("title").textContent;
+            const link = item.querySelector("link").textContent;
+            const pubDate = item.querySelector("pubDate")?.textContent || "";
+            
+            html += `
+              <div class="news-item">
+                <a href="${link}" target="_blank">${title}</a>
+                <p>${pubDate}</p>
+              </div>
+            `;
+          }
         });
-      })
-      .catch(error => {
-        document.getElementById('insights-news').innerHTML = '<p style="color:red">Error loading feed. Try again later.</p>';
-      });
+
+        document.getElementById('pib-news').innerHTML = html;
+      } catch (error) {
+        document.getElementById('pib-news').innerHTML = '<p style="color:red;">Failed to load PIB feed.</p>';
+        console.error('Error fetching PIB RSS:', error);
+      }
+    }
+
+    loadPIBNews();
   </script>
+
 </body>
-</html>     
+</html>
