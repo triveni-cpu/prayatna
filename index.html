@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>upsc dashboard</title></head>
-  <body>
-    <h1>hello welcome to my page</h1>
-  </body>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPSC Dashboard - InsightsIAS News</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .news-item {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .news-item h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .news-item p {
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>Latest UPSC News - InsightsIAS</h1>
+  <div id="insights-news">Loading news...</div>
+
+  <script>
+    fetch('https://api.rss2json.com/v1/api.json?rss_url=https://www.insightsonindia.com/feed/')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('insights-news');
+        container.innerHTML = '';
+        data.items.slice(0, 5).forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'news-item';
+          div.innerHTML = `
+            <h3><a href="${item.link}" target="_blank">${item.title}</a></h3>
+            <p>${item.pubDate.split(' ')[0]}</p>
+            <p>${item.contentSnippet}</p>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById('insights-news').innerHTML = '<p style="color:red">Error loading feed. Try again later.</p>';
+      });
+  </script>
+</body>
+</html>
