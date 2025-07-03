@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UPSC Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+     
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin:0;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ccc;
+      flex-wrap: wrap; /* allows wrapping on small screens */
+    }
+
+    .leftlogo, .rightlogo {
+      width: 60px;
+      height: auto;
+    }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      margin-left: -20px;
+      font-size: 35px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 8px;
+    }
+
+    .title>.heading {
+      text-align: center;
+      
+      margin-top: 5px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        letter-spacing: 5px;
+        font-size: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .logo-left, .logo-right {
+        width: 50px;
+      }}
+      .menu{
+              height: 50px;
+              width: 100%;
+              background-color:orangered ;
+                }
+                .menu>div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                height:inherit;
+                
+                }
+                .buttons button{
+                    background-color: orangered;
+                    color:white;
+                    border: none;
+                    margin:0 auto;
+                    font-size:15px;
+                }
+
+ .pdf-section {
+      margin-bottom: 40px;
+    }
+    .pdf-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+    .pdf-section h3 {
+      font-family: 'Trebuchet MS', sans-serif;
+      margin-bottom: 10px;
+    }
+    .pdf-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .pdf-card {
+      width: 200px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      overflow: hidden;
+    }
+    .pdf-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .pdf-card button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      background: orangered;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .pdf-card button:hover { background: #0056b3; }
+
+    .subjects h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.subjects {
+  margin-bottom: 60px;
+}
+
+
+
+    @media (max-width: 600px) {
+      .pdf-card { width: 100%; max-width: 300px; }
+    }
+    
+    
+   
+                </style>
+                <body>
+                <div class="header">
+    <img style="height:175px;width:150px;"src="leftlogo.png" class="logo-left">
+    <div class="name"><b style="font-size: xx-large; margin-right:auto;">Prayatna</b><br>&emsp;<b><h3>Website</h3></b></div>
+    <div class="title"><h3 style="color:rgb(4, 4, 65);">UPSC</h3><div class="heading">Union Public Service Commission</div></div>
+    <img style="border-radius: 50%; height: 110px; width:110px;box-shadow: 0px 3px 3px 5px grey" src="rightlogo.png">
+    
+  </div><br>
+
+<div class="menu">
+   <div class="buttons">
+    <button onclick="openPage()">About UPSC</button>
+  <script>
+    function openPage(){
+      window.location.href="about.html";
+    }
+  </script>
+  <button onclick="openPage2()">Booklist</button>
+  <script>
+    function openPage2() {
+      window.location.href="booklist.html";
+    }
+  </script>
+   <button onclick="openPage3()">Syllabus</button>
+  <script>
+    function openPage3() {
+      window.location.href="syllabus.html";
+    }
+  </script>
+  <button onclick="openPage4()">Exampattern</button>
+  <script>
+    function openPage4() {
+      window.location.href="exampattern.html";
+    }
+  </script>
+  <button onclick="openPage5()">Current Affairs</button>
+  <script>
+    function openPage5() {
+      window.location.href="news.html";
+    }
+  </script>
+<button onclick="openPage6()">Motivational Stories</button>
+  <script>
+    function openPage6() {
+      window.location.href="stories.html";
+    }
+  </script>
+  
+  
+  </div><br><br><h1 style="margin-left: 620px; margin-bottom:15px ; margin-top:20px; rgb(10, 10, 107) ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; "> Books For Upsc</h1><br><br>
+  <p style="color: RED; margin-right="20px;"><b>NOTE :</b> Select the  books & resources that suits your preparation style - there's no right or wrong choice, there's only the choice that suits you best.</p><br><br>
+  
+  <section class="pdf-section">
+    <h2>NCERTs</h2>
+
+    <!-- Polity -->
+    <div class="subjects">
+      <h3><mark>Polity</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="polity9.jpg" alt="9th Polity"><a href="polity9.pdf"><button>9th Polity  NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="polity10.jpg" alt="10th Polity"><a href="polity10.pdf"><button>10th Polity NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="polity11a.jpg" alt="11th Polity #1"><a href="polity11a.pdf"><button>11th Polity Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="polity11b.jpg" alt="11th Polity #2"><a href="polity11b.pdf"><button>11th Polity Book-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="polity12a.jpg" alt="12th Polity #1"><a href="polity12a.pdf"><button>12th Polity Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="polity12b.jpg" alt="12th Polity #2"><a href="polity12b.pdf"><button>12th Polity Book-2 NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="subjects">
+      <h3><mark>History</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="history6.webp" alt="6th History"><a href="history6.pdf"><button>6th History New NCERT PDF </button></a></div>
+        <div class="pdf-card"><img src="history7.jpg" alt="7th History"><a href="history7.pdf"><button>7th History New NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history8.jpg" alt="8th History"><a href="history8.pdf"><button>8th History New NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history9.jpg" alt="9th History"><a href="history9.pdf"><button>9th History New NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history10.jpg" alt="10th History"><a href="history10.pdf"><button>10th History New NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history11.jpg" alt="11th History"><a href="history11.pdf"><button>11th History Book-1 Old NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history11b.jpg" alt="11th History "><a href="history11b.pdf"><button>11th History Book-2 Old NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="history12.jpg" alt="12th History"><a href="history12.pdf"><button>12th History Old NCERT PDF</button></a></div>
+<div class="pdf-card"><img src="tamilnadu11.jpg" alt="Tamilnadu 11th History"><a href="tamilnadu11.pdf" target="_blank"><button> Tamilnadu 12th History NCERT PDF</button></a></div> 
+    <div class="pdf-card"><img src="Tamilnadu12.png" alt="Tamilnadu 12th History"><a href="Tamilnadu12.pdf" target="_blank"><button> Tamilnadu 12th History NCERT PDF</button></a></div> 
+
+
+        <div class="pdf-card"><img src="TheStory-of-Civilization-Part-2-Arjun-Dev.jpg" alt="12th History"><a href="TheStory-of-Civilization-Part-2-Arjun-Dev.pdf"><button>Reference book for World History NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- Geography -->
+    <div class="subjects">
+      <h3><mark>Geography</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="geography6.jpg" alt="6th Geography"><a href="geography6.pdf"><button>6th Geography NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography7.jpg" alt="7th Geography"><a href="geography7.pdf"><button>7th Geography NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography8.jpg" alt="8th Geography"><a href="geography8.pdf"><button>8th Geography NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography9.jpg" alt="9th Geography"><a href="geography9.pdf"><button>9th Geography NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography10.jpg" alt="10th Geography"><a href="geography10.pdf"><button>10th Geography NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography11a.jpg" alt="11th GeographyB1"><a href="geography11a.pdf"><button>11th Geography Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography11b.jpg" alt="11th GeographyB2"><a href="geography11b.pdf"><button>11th Geography Book-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography12a.jpg" alt="12th GeographyB1"><a href="geography12a.pdf"><button>12th Geography Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="geography12b.jpg" alt="12th GeographyB2"><a href="geography12b.pdf"><button>12th Geography Book-2 NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- Economics -->
+    <div class="subjects">
+      <h3><mark>Economics</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="economics9.jpg" alt="9th Economics"><a href="economics9.pdf"><button>9th Economics NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="economics10.jpg" alt="10th Economics"><a href="economics10.pdf"><button>10th Economics NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="economics11.jpg" alt="11th Economics"><a href="economics11.pdf"><button>11th Economics Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="economics11b.jpg" alt="11th Economics #2"><a href="economics11b.pdf"><button>11th Economics Book-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="economics12a.jpg" alt="12th Economics #1"><a href="economics12a.pdf"><button>12th Economics Book-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="economics12b.jpg" alt="12th Economics #2"><a href="economics12b.pdf"><button>12th Economics Book-2 NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- Science, Technology, Environment -->
+    <div class="subjects">
+      <h3><mark>Science &amp; Tech &amp; Environment</mark></h3>
+      <div class="pdf-grid">
+        <!-- Update the filenames and alt text if needed -->
+        <div class="pdf-card"><img src="science6.jpg" alt="9th Science"><a href="science6.pdf"><button>6th Science NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="science7.jpg" alt="10th Science"><a href="science7.pdf"><button>7th Science NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="science8.jpg" alt="11th Science"><a href="science8.pdf"><button>8th Science NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="science9.jpg" alt="11th Science"><a href="science9.pdf"><button>9th Science NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="science10.jpg" alt="12th Science"><a href="science10.pdf"><button>10th Science NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="physics11.jpg" alt="11th Physics"><a href="physics11.pdf"><button>11th Physics Part-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="physics11b.jpg" alt="11th Physics"><a href="physics11b.pdf"><button>11th Physics Part-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="physics12a.jpg" alt="12th Physics"><a href="physics12a.pdf"><button>12th Physics Part-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="physics12b.jpg" alt="12th Physics Book 2"><a href="physics12b.pdf"><button>12th Physics Part-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="chemistry11a.jpg" alt="11th Chemistry"><a href="chemistry11a.pdf"><button>11th Chemistry Part-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="chemistry11b.jpg" alt="11th Chemistry"><a href="chemistry11b.pdf"><button>11th Chemistry Part-2 NCERT PDF</button></a></div>
+       <div class="pdf-card"><img src="chemistry12a.jpg" alt="12th Chemistry Book 1"><a href="chemistry12a.pdf"><button>12th Chemistry Part-1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="chemistry12b.jpg" alt="12th Chemistry Book 2"><a href="chemistry12b.pdf"><button>12th Chemistry Part-2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="biology11.jpg" alt="11th Biology"><a href="biology11.pdf"><button>11th Biology NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="biology12.jpg" alt="12th Biology"><a href="biology12.pdf"><button>12th Biology NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- Sociology -->
+    <div class="subjects">
+      <h3><mark>Sociology</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="sociology11a.jpg" alt="11th Sociology"><a href="sociology11a.pdf"><button>11th Sociology Book 1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="sociology11b.jpg" alt="11th Sociology #2"><a href="sociology11b.pdf"><button>11th Sociology Book 2 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="sociology12a.jpg" alt="12th Sociology Book 1"><a href="sociology12a.pdf"><button>12th Sociology Book 1 NCERT PDF</button></a></div>
+        <div class="pdf-card"><img src="sociology12b.jpg" alt="12th Sociology Book 2"><a href="sociology12b.pdf"><button>12th Sociology Book 2 NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+    <!-- Art & Culture -->
+    <div class="subjects">
+      <h3><mark>Art &amp; Culture</mark></h3>
+      <div class="pdf-grid">
+        <div class="pdf-card"><img src="art&culture11.jpg" alt="11th Art &amp; Culture"><a href="art&culture11.pdf"><button>11th Art &amp; Culture NCERT PDF</button></a></div>
+      </div>
+    </div>
+
+  </section>
+
+  
+  
+  </body>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Quiet Storm – Tina Dabi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ccc;
+      flex-wrap: wrap;
+    }
+
+    .leftlogo, .rightlogo {
+      width: 60px;
+      height: auto;
+    }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      margin-left: -20px;
+      font-size: 35px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 8px;
+    }
+
+    .title > .heading {
+      text-align: center;
+      margin-top: 5px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 5px;
+      font-size: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .logo-left, .logo-right {
+        width: 50px;
+      }
+    }
+
+    .menu {
+      height: 50px;
+      width: 100%;
+      background-color: orangered;
+    }
+
+    .menu > .buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: inherit;
+    }
+
+    .buttons button {
+      background-color: orangered;
+      color: white;
+      border: none;
+      margin: 0 auto;
+      font-size: 15px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #090909;
+    }
+    .dashboard {
+      
+      color: rgb(6, 6, 95);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+    .dashboard h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    .story-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: white;
+      
+      background-color: rgb(40, 146, 24);
+    }
+    .story-content {
+      line-height: 1.8;
+      font-size: 17px;
+      text-align: justify;
+    }
+
+    img{
+      
+      margin-left: 50px;
+      margin-right:50px ;
+      height: 250px; width:250px;
+      padding: 25px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img style="height:175px;width:150px;" src="leftlogo.png" class="logo-left">
+    <div class="name">
+      <b style="font-size: xx-large; margin-right:auto;">Prayatna</b><br>
+      &emsp;<b><h3>Website</h3></b>
+    </div>
+    <div class="title">
+      <h3 style="color:rgb(4, 4, 65);">UPSC</h3>
+      <div class="heading">Union Public Service Commission</div>
+    </div>
+    <img style="border-radius: 50%; height: 110px; width:110px;box-shadow: 0px 3px 3px 5px grey" src="rightlogo.png">
+  </div><br>
+
+  <div class="menu">
+    <div class="buttons">
+      <button onclick="openPage()">About UPSC</button>
+      <button onclick="openPage2()">Booklist</button>
+      <button onclick="openPage3()">Syllabus</button>
+      <button onclick="openPage4()">Exampattern</button>
+      <button onclick="openPage5()">Current Affairs</button>
+      <button onclick="openPage6()" >Motivational Stories</button>
+    </div>
+  </div>
+
+  <script>
+    function openPage() {
+      window.location.href = "about.html";
+    }
+    function openPage2() {
+      window.location.href = "booklist.html";
+    }
+    function openPage3() {
+      window.location.href = "syllabus.html";
+    }
+    function openPage4() {
+      window.location.href = "exampattern.html";
+    }
+    function openPage5() {
+      window.location.href = "news.html";
+    }
+   function openPage6() {
+      window.location.href = "stories.html";
+    }
+  </script>
+
+  <div class="dashboard">
+    <h1>Trials to Triumph: Civil Servants True Stories</h1>
+  </div>
+  <div class="container">
+    <div class="story-title">Story 1 : "The Quiet Storm" – The Journey of Tina Dabi (AIR 1, UPSC 2015)</div>
+    <img src="story1.jpg" ><img src="story1b.webp" >
+    <div class="story-content">
+      <h4 style="text-align: center; color: #6a1b9a; font-weight: bold;">
+    Speciality: AIR-1 , in the First Attempt, Without coaching , at the age of 22 years .
+  </h4>
+
+      <p>In the dusty corners of Delhi’s modest government colony, there lived a girl who rarely raised her voice — not because she lacked words, but because her silence had more power than most people’s speeches.</p>
+
+      <p>Her name was <strong>Tina Dabi</strong>. Born into a Dalit family, her parents believed not in complaining about the system, but in rising above it. Her father, a humble telecom officer, worked day and night to make sure his daughters could study in the best schools they could afford. Her mother, a once-appointed civil servant, gave up her career to build her daughters’ futures with her own hands.</p>
+
+      <p>As a child, Tina never missed a single day of school. Her notebooks were always neat. Her answers, always thoughtful. Teachers said she was disciplined — but what she really was, was <strong>destined</strong>.</p>
+
+      <p>From Political Science at Lady Shri Ram College, Tina decided she would attempt the <strong>UPSC Civil Services Examination</strong> in her very first eligible year — and she would do it <strong>without any coaching</strong>.</p>
+
+      <p>Her preparation wasn’t loud or dramatic. There were no flashy coaching centers. She studied alone with handwritten notes, PDFs, and a clock ticking louder than ever. From 8 a.m. to midnight, she read, revised, wrote, and repeated. She wasn’t just studying for UPSC — she was learning to <em>lead India</em>.</p>
+
+      <p>She suffered personal loss during preparation. She mourned in the morning and studied at night. Her motivation? To prove that a Dalit girl from a middle-class home could top the toughest exam in the country.</p>
+
+      <p>She cleared Prelims, Mains, and faced the Interview with poise. When asked, "What if you don't become an IAS officer?", she replied, "I will still be someone who worked for change. But if I do become one, I will be someone who can make that change happen."</p>
+
+      <p><strong>Result: AIR 1. First Attempt. No Coaching. Age 22.</strong></p>
+
+      <p>Tina joined LBSNAA, chose Rajasthan cadre, and started working in tribal education, women’s welfare, and sanitation. She faced public scrutiny later, personal heartbreak, but never lost her grace or focus.</p>
+
+      <p>Tina Dabi today stands not just as an officer — but as a <strong>symbol</strong>. Of courage. Of consistency. Of quiet revolution. She proved that you don’t need to be born into power to earn it. You just need to believe — and show up, every single day.</p>
+
+      <p><em>She is, and always will be, the quiet storm who rewrote the rules of the impossible.</em></p>
+    </div>
+<br><br><br><br><br>
+    <div class="story-title">Story 2 : “The Weight of a Rickshaw” – The Journey of Govind Jaiswal (IAS, AIR 48)</div>
+    <div class="story-content">
+<img src="story2.jpg" ><img src="story2b.jpg" >
+     <h4 style="text-align: center; color: #6a1b9a; font-weight: bold;">
+    Speciality: Son of a Rickshaw Puller, No Plan B, First Attempt IAS Officer with coaching – A Life Carved from Grit and Candlelight .
+  </h4>
+
+  <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #333;">
+
+    <p>
+      In the narrow, smoke-clogged lanes of Varanasi, where the sound of diesel engines and temple bells blur into a strange harmony, lived a boy who carried the weight of a dream far heavier than the rickshaw his father pulled every day.
+    </p>
+
+    <p>
+      <b>Govind Jaiswal</b> was not born into books or privilege. His childhood smelled of sweat and grease, the constant scent that clung to his father’s shirt after hours of pedaling passengers across the city. Their home was no larger than a government toilet — a single room next to a generator repair shop. The machine thundered through the day and night, leaving no space for silence or study.
+    </p>
+
+    <p>
+      From a very early age, Govind had one privilege — ambition. But ambition is dangerous in a poor man’s house. It burns hotter than food can fuel.
+    </p>
+
+    <p>
+      <b>His first spark came during a school fight.</b> A classmate, wealthy and spoiled, looked at Govind and sneered:
+    </p>
+
+    <p style="margin-left: 20px; font-style: italic;">
+      “You? You’ll become an officer? You’re a rickshaw-wallah’s son. You’ll pull rickshaws just like your father.”
+    </p>
+
+    <p>
+      The words hurt more than fists ever could. That night, 12-year-old Govind sat beside his sleeping father and whispered to himself:
+    </p>
+
+    <p style="margin-left: 20px; font-style: italic;">
+      “I will become an IAS officer.”
+    </p>
+
+    <p>
+      From that day, the dream stopped being just a wish. It became war.
+    </p>
+
+    <p>
+      Govind was a brilliant student. But brilliance isn’t enough when your notebooks are hand-me-downs and your exams clash with electricity cuts. <b>He studied by candlelight, often pausing to wipe sweat from his brow, sometimes because of heat, other times because of tears.</b>
+    </p>
+
+    <p>
+      His father, illiterate and aging, began to understand the size of his son’s dream. He knew he had nothing to give him but faith. So when Govind needed coaching in Delhi, his father did the unthinkable — <b>sold their only piece of land.</b>
+    </p>
+
+    <p>
+      Delhi was a different battlefield. Here, polished boys and girls spoke fluent English, quoted foreign thinkers, and had printed notes from top institutes. Govind walked into classes in his worn kurta and chappals, often sitting in corners so no one noticed him. He didn’t ask questions — he listened. Observed. Absorbed.
+    </p>
+
+    <p>
+      He didn’t have money for mess food, so he cooked once a day. He didn’t have enough clothes, so he wore the same shirt for weeks. He didn’t go out, didn’t make friends, didn’t waste time.
+    </p>
+
+    <p><b>His world had only three things:</b></p>
+    <ul>
+      <li>Books</li>
+      <li>His father’s face</li>
+      <li>And that insult from school</li>
+    </ul>
+
+    <p>
+      <b>Govind’s first attempt was his only shot.</b> There was no backup. No plan B. He filled the UPSC form with trembling hands and stepped into the exam hall with a borrowed pen. His heart beat like a war drum. Every question he answered felt like lifting that rickshaw again — not for passengers this time, but for his family’s future.
+    </p>
+
+    <p>
+      When the results came, he didn’t look at them first. He looked at his father.
+    </p>
+
+    <p>
+      Then he read the number: <b>AIR 48</b>
+    </p>
+
+    <p>
+      For a moment, the room was silent. No diesel, no generator, no temple bells. Just silence.
+    </p>
+
+    <p style="background-color: #fce4ec; padding: 10px; font-style: italic;">
+      Then his father whispered, “Beta… hum jeet gaye.”
+    </p>
+
+    <p>
+      Govind cried. Not for joy, but for the weight that finally lifted.
+    </p>
+
+    <p>
+      He became an IAS officer and returned to Varanasi — not as a rickshaw puller’s son, but as the collector of dreams. Today, he works in public policy, shaping schemes for the poor, ensuring that children like him never hear the words, “You can’t.”
+    </p>
+
+    <p style="font-style: italic;">
+      He didn’t just pass an exam. He broke a wall, built a door, and walked through it — carrying every poor child’s hope with him.
+    </p>
+
+  </div>
+
+    </div><br><br><br><br>
+<!--story 3-->
+    <div class="story-title">Story 3 :  “Runway to Republic” – The Journey of Aishwarya Sheoran (AIR 93, 2019)
+</div>
+    <div class="story-content">
+      <img src="story3.jpg"></img><img src="story3b.jpg"></img>
+
+<h4 style="text-align: center; color: #6a1b9a; font-weight: bold;">Speciality: From Miss India Finalist to IAS Officer in the very First Attempt without any Coaching</h4>
+
+  <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #333;">
+
+    <p>Under the flashing lights of a Delhi fashion runway, she walked with elegance, grace, and confidence. Cameras clicked. Heads turned. The media whispered, <b>“Aishwarya Sheoran, Femina Miss India Finalist 2016.”</b> </p>
+    <p>But behind the glamor, she carried a silent, burning desire — to serve.</p>
+    <p>Aishwarya was born in Churu, Rajasthan, to a military family. Her father, a colonel in the army, instilled discipline from day one. Her mother taught her dignity. Growing up, she was a topper, a voracious reader, a debater. But at 17, she was discovered by a modeling agency. Her height, poise, and expression brought her to the ramp.</p>
+    <p>The world saw a model. She saw a mask.</p>
+    <p>After participating in Miss India and walking for major designers, she realized that superficial fame never filled her soul. Her heart didn’t beat for applause — it longed for impact. Every time she visited a village with her father, she felt a calling: to uplift lives, to create policy, not posters.</p>
+    <p>She made the decision quietly — no media, no farewell walk, no grand announcement.</p>
+    <p>She deactivated social media, said goodbye to the world of lights and makeup, and locked herself in her Delhi room with NCERTs and standard books.</p>
+    <p> <b>No coaching. No guidance. No publicity.</b></p>
+    <p>From 6 a.m. to midnight, she studied. She solved thousands of test papers, revised GS over and over, and built her own discipline plan — just like a military routine.</p>
+    <p>People mocked her when they found out. <i>“Miss India? UPSC? Joke?”</i> Some thought it was a PR stunt.</p>
+    <p>But the list arrived. And she stood at <b>AIR 93</b>.</p>
+    <p>Now, <b>Aishwarya Sheoran</b> is an officer under training. She’s using her platform to promote rural literacy, menstrual health education, and women’s empowerment.</p>
+    <p>She still carries her confidence. But now, it’s not for flashing bulbs — it’s for field visits, Gram Sabha meetings, and policy reforms.</p>
+    <p style="font-style: italic;">She proved that beauty isn’t about face symmetry — it’s about the courage to change your identity for the greater good.</p>
+
+<!--story 4-->
+<div class="story-title">Story 4 :  Becoming Both, Becoming More” – The Journey of Aishwarya Rutuparna Pradhan (India’s First Transgender Civil Servant)
+
+</div><img src="story4.jpg"></img><img src="story4b.jpg"></img>
+
+<div class="story-content">
+
+<h4 style="text-align: center; color:#7b1fa2 ; font-weight: bold;">
+    Speciality: India’s First Openly Transgender Civil Servant in the First Attempt without any coaching.
+  </h4>
+
+  <div style="max-width: 800px; margin: auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #333;">
+
+    <p>
+      In the quiet village of Katibageri in Odisha, a young boy named Ratikanta sat in front of the mirror with questions — about the world, about himself, about who he truly was.
+    </p>
+
+    <p>
+      He was born male. But he never felt like one. While his classmates played cricket and traded action cards, he preferred dancing, writing poetry, and draping his mother’s dupatta around his shoulder.
+    </p>
+
+    <p>
+      They laughed at him. Teachers punished him. His family prayed it would pass.
+    </p>
+
+    <p>
+      But what Ratikanta felt wasn’t a phase — it was his identity. As he grew older, the world grew crueler. He was bullied, called names, sexually harassed, and mentally broken. But he fought silently. He kept his grades high. He studied relentlessly — not to escape, but to elevate.
+    </p>
+
+    <p>
+      After graduation, <b>he appeared for the Odisha Civil Services exam</b>. <b>He cleared it in 2010</b> and became a Group-B officer. But something still felt incomplete.
+    </p>
+
+    <p>
+      In 2015, after the NALSA judgment that recognized transgender rights, he made a bold decision:
+      To legally transition.
+    </p>
+
+    <p>
+      He chose his name: <b>Aishwarya Rutuparna Pradhan</b> — a blend of grace and courage.
+    </p>
+
+    <p>
+      When the news spread, headlines exploded: <i>“Odisha Gets Its First Transgender Civil Servant.”</i>
+    </p>
+
+    <p>
+      But behind the headlines was a woman who had cried alone for years. Who had written suicide notes at 19. Who had endured insults even after becoming an officer.
+    </p>
+
+    <p>
+      Colleagues whispered. Some refused to work under her. But she kept doing her job — auditing government schemes, improving transparency, and pushing for gender sensitization in rural blocks.
+    </p>
+
+    <p>
+      Today, Aishwarya is more than a civil servant. She’s a symbol — for trans children who think they’re broken, for young adults trapped in the wrong body, for families afraid of truth.
+    </p>
+
+    <p>
+      She visits colleges, speaks at awareness programs, and mentors young LGBTQIA+ aspirants who dream of the civil services but fear society more than the syllabus.
+    </p>
+
+    <p style="font-style: italic;">
+      She didn’t just change her name.<br>
+      She changed the system.<br>
+      From he to she — from pain to power.
+    </p>
+<br><br><br><br>
+
+<div class="story-title">Story 5 :   “The Boy with the Burnt Hands” – The Journey of Suraj Kumar (AIR 5, 2019)
+</div><img src="story5.jpg"></img><img src="story5b.jpg"></img>
+<div class="story-content">
+
+   
+  <h4 style="text-align: center; color:   #7b1fa2; font-weight: bold;">
+    Speciality: From Tea Stall Worker to AIR 5 an IAS Officer Wihtout Coaching. 
+  </h4>
+
+  <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.7; color: #333;">
+
+    <p>
+      On the cracked stone platform of a sleepy railway station in Bihar, a ten-year-old boy stood behind a steaming steel kettle. His hands burned from the hot handles, but his eyes held a quiet fire.
+    </p>
+
+    <p>
+      His name was <b>Suraj Kumar</b>. A tea-seller’s son. A dreamer in slippers. And the first time he heard the word <b>IAS</b>, it wasn’t from a teacher or a classroom — but from a government officer who refused to pay for tea.
+    </p>
+
+    <p>
+      The officer’s bodyguard shoved him aside and muttered, <i>“Yeh sir IAS hai, isko chhoona mat.”</i>
+    </p>
+
+    <p>
+      That sentence hit Suraj harder than the shove — not because of the insult, but because of the <i>respect</i>. Here was someone who made grown men step aside, with just a title.
+    </p>
+
+    <p>
+      That night, Suraj asked his mother, “What’s an IAS?”
+    </p>
+
+    <p>
+      She didn’t know exactly — she worked as a helper at a government school. But she said softly, <i>“Shayad koi bada aadmi hoga. Tu ban ja.”</i>
+    </p>
+
+    <p>
+      And he believed her.
+    </p>
+
+    <p>
+      Suraj’s childhood was steam, sweat, and struggle. He woke up at 4 a.m. to help his mother cook, sold tea till 10, ran to school, then came back to the stall in the evening. His books smelled of burnt milk. His fingers had white scars — the marks of a beginning few saw, but none could forget.
+    </p>
+
+    <p>
+      There was no electricity at home. So he studied under the yellow glow of a street lamp outside a paan shop. The shopkeeper, watching the boy’s dedication, started bringing him chai at 10 p.m. — on the house.
+    </p>
+
+    <p>
+      Suraj topped his district in Class 10. A retired teacher, Mr. Shukla, heard of his feat and called him one day:
+    </p>
+
+    <p>
+      <i>“Kya banna chahte ho?”</i><br>
+      Suraj said: <b>“IAS.”</b>
+    </p>
+
+    <p>
+      Mr. Shukla smiled. <i>“Toh chaliye, shuru karte hain.”</i>
+    </p>
+
+    <p>
+      From that day, Mr. Shukla became his mentor. He introduced Suraj to newspapers, loaned him old NCERT books, and taught him how to dream — not just survive.
+    </p>
+
+    <p>
+      College life wasn’t easy. Suraj rented a room the size of a bathroom. He gave tuitions at night, skipped meals to save for UPSC fees, and studied whenever and wherever he could.
+      <b>He failed his first attempt</b> — not because of lack of effort, but because he didn’t yet understand the exam.
+    </p>
+
+    <p>
+      Mr. Shukla told him: <i>“Fail hone ka matlab hai ki tum khel mein ho. Haarne ka nahi.”</i>
+    </p>
+
+    <p>
+      He tried again. <b>His second attempt — he reached Mains, but couldn’t clear.</b>
+    </p>
+
+    <p>
+      Then came the biggest blow. His mother — his guiding star — passed away suddenly. The woman who believed in his impossible dream was gone. Suraj almost gave up.
+    </p>
+
+    <p>
+      But then he looked at her photo and whispered, “I won’t let her go in vain.”
+    </p>
+
+    <p>
+      He came back stronger. Built a study schedule that would terrify even toppers. Solved hundreds of mocks. Memorized Ethics case studies. Watched and mimicked topper interviews. He recorded himself answering questions, rewatched them on 2x speed, and corrected every pause, every stumble.
+    </p>
+
+    <p style="font-weight: bold;">
+      Third Attempt — AIR 5.
+    </p>
+
+    <p>
+      When the result came, he didn’t scream. He didn’t cry. He just stared at the screen — and then at the old steel kettle on his table. He placed his rank card next to it.
+    </p>
+
+    <p>
+      Two symbols. Two lives. One journey.
+    </p>
+
+    <p>
+      Today, <b>Suraj Kumar</b> is an <b>IAS officer</b>. He serves in backward districts — building schools, improving sanitation at railway stations, and ensuring no other tea-seller boy is ever pushed aside for being “small.”
+    </p>
+
+    <p>
+      He still keeps that kettle in his office. Not as a reminder of pain — but as a shrine of purpose.
+    </p>
+
+    <p>
+      <i>He didn’t rise despite the burns.<br>
+      He rose because of them.</i>
+    </p>
+
+    <p>
+      And when someone asks him, “What did you have that others didn’t?”<br>
+      Suraj simply smiles and replies: <b>“A reason.”</b>
+    </p>
+</div>
+
+<br><br><br><br>
+
+<div class="story-title">Story 6 :   “The Banjara Boy Who Reached the Top” – The Journey of Ajmera Sanketh Kumar (All India Rank 35 2022)
+</div><img src="story6.jpg"></img><img src="story6b.jpg"></img>
+<div class="story-content">
+
+  
+<h4 style="text-align: center; color: #7b1fa2; font-weight: bold;">
+  Speciality: First Banjara (Tribe) Boy Turned IAS Officer, Bridge Between Tribal Roots and National Policy.
+</h4>
+
+
+<div class="story-content">
+
+  <p>In the heart of Telangana’s tribal belt, where Lambadi (Banjara) songs echo through red dust trails and ambition often gets buried under early responsibility, a young boy sat under a neem tree with a tattered NCERT book and a dream no one around him dared to pronounce — IAS.</p>
+
+  <p>His name was <b>Ajmera Sanketh Kumar</b>. The only child of two government officers. The grandson of a nomadic generation. And the first from his tribal community to dream not of survival — but of service.</p>
+
+  <p>Sanketh’s childhood was simple. No internet. No air-conditioning. No elite school. His mother worked at ISRO as a technical assistant. His father, a horticulture officer, traveled across rural villages, ensuring drip irrigation reached dry farms. Sanketh’s toys were engineering tools. His lullabies — the sound of buses his mother took to work.</p>
+
+  <p>He studied in a government school until Class 10. Then cracked the odds to enter IIT Delhi — the first Banjara from his area to do so.</p>
+
+  <p>People thought the story ended there.</p>
+
+  <p>But for Sanketh, IIT was not the destination. It was just a stepping stone. He earned his Mechanical Engineering degree and got a plush job in Japan. Clean roads, high salary, respect — everything a middle-class tribal boy would cherish.</p>
+
+  <p>But his heart was restless.</p>
+
+  <p>One evening, in a high-tech office in Tokyo, he saw a photo of a District Collector inaugurating a tribal welfare school in India. Something inside him stirred.</p>
+
+  <p>He called his parents that night and said, “I want to come back. I want to prepare for UPSC.”</p>
+
+  <p>His father paused and said, “Japan ki salary chhodega tu? Ye exam sabke bas ka nahi hota, beta.” (You’ll leave a salary in Japan for this? This exam is not for everyone.)</p>
+
+  <p>But his mother knew. She had seen that fire before — not in the labs of ISRO, but in her son’s stubborn eyes.</p>
+
+  <p>Sanketh returned to India. Not to the comfort of home, but to a PG room near Mukherjee Nagar, Delhi. No AC. No job. Just test series, mains strategies, and a calendar circled in red: CSE Prelims – June 2021.</p>
+
+  <p>He created a detailed study plan. Woke up at 5 a.m. every day. Math was his optional — because it was logical, score-friendly, and familiar. He built Excel sheets to track progress. Created flashcards for ethics. Watched Parliament debates to improve articulation.</p>
+
+  <p>But it wasn’t easy.</p>
+
+  <p>His friends got married. Got promotions. Bought homes. Sanketh missed birthdays, weddings, even festivals — because his festival was yet to arrive.</p>
+
+  <p><b>In his first attempt</b>, he missed the final list by a few ranks.</p>
+
+  <p>He could’ve gone back to Japan. But warriors don’t go back — they rise again.</p>
+
+  <p><b>Second attempt — 2022.</b></p>
+
+  <p>This time, he prepared smarter. More mock interviews. Focused answer writing. He recorded himself giving mock answers in front of a mirror, watched them on 2x speed to identify hesitations.</p>
+
+  <p>The result came on a humid April afternoon.</p>
+
+  <p>He opened the UPSC website, his hands trembling like the first time he rode a bike.</p>
+
+  <p><b>AIR 35.</b></p>
+
+  <p><b>Ajmera Sanketh Kumar</b>. Banjara Tribe. Telangana Cadre. <b>IAS</b>.</p>
+
+  <p>He didn’t scream. He didn’t collapse. He just closed his eyes — and whispered, “Shukriya Amma.”</p>
+
+  <p>Today, Sanketh is posted in the Ministry of Civil Aviation, Government of India. But more than a bureaucrat, he is a bridge — between remote tribal settlements and national policy.</p>
+
+  <p>He gives motivational talks to tribal students. He runs free mentorship sessions for aspirants from SC/ST and EWS backgrounds. And every time a boy from a Lambadi village whispers, “Sir, main bhi IAS banna chahta hoon,” Sanketh just smiles.</p>
+
+  <p>He wasn’t born in privilege.<br>He wasn’t born to follow a script.</p>
+
+  <p>He was born to rewrite it.</p>
+
+  <p>He is not just an <b>IAS officer</b>.<br>He is proof — that no community is backward, only underserved.</p>
+
+  <p><i>And through his rise, a thousand others will now rise too.</i></p>
+
+</div>
+
+</div><br><br><br>
+<div class="story-title">Story 7 :   "From Red Zone to Khaki” – The Journey of Namrata Jain (AIR-99 IPS, 2016  Dantewada)
+</div><img src="story7.jpg"></img><img src="story7b.avif"></img>
+<div class="story-content">
+
+
+<h4 style="text-align: center; color: #7b1fa2; font-weight: bold;">
+    Speciality: First IPS Officer from Dantewada, Naxal-Affected Zone Survivor Turned Protector
+</h4>
+
+
+<div class="story-content">
+
+  <p>
+    The land of dantewada in chhattisgarh is known for many things — thick forests, tribal resilience, and the shadows of guns. but in the midst of that fear, there bloomed a girl with a name no one forgets today: <b>namrata jain</b>.
+  </p>
+
+  <p>
+    namrata was born in geedam, one of the most dangerous naxal-affected regions in india. her childhood wasn’t filled with lullabies — it echoed with gunshots and warnings. schools often shut down because teachers wouldn’t come. roads remained deserted after sundown. and dreams? dreams were luxury items, sold only to the rich.
+  </p>
+
+  <p>
+    but namrata’s family believed in the power of education. her father ran a small shop and, despite threats and lack of safety, sent her to a private school in jagdalpur. that 100-km journey was often made in buses that had to change routes due to naxal alerts. but namrata endured it like a soldier.
+  </p>
+
+  <p>
+    her first spark came in class 10, when a female ias officer visited her school. she saw the lady walk in with confidence, head held high, guarded but fearless. that day, something clicked. <i>“what if i could be her? what if i could return to dantewada, not as a victim — but as a protector?”</i>
+  </p>
+
+  <p>
+    after graduation, she moved to bhilai for coaching. but city life came with its own trauma — financial burdens, cultural shock, and loneliness. she didn't speak fluent english. her essays were rejected by mock evaluators. she failed her first attempt at prelims and broke down. but a call from her father reminded her:
+  </p>
+
+  <p>
+    <i>“don’t come home until you win your own battle. dantewada is waiting for you.”</i>
+  </p>
+
+  <p>
+    she fought harder. in her second attempt, she cleared prelims and mains but didn’t make the final cut. she started teaching poor children in her spare time and returned to her notes each night with redoubled focus.
+  </p>
+
+  <p>
+    her <b>third attempt was her redemption</b>. she <b>cleared UPSC and was selected for the Indian Police Service</b>.
+  </p>
+
+  <p>
+    today, <b>Namrata serves in the IPS</b>, posted in areas where women once whispered their fears to her. now they salute her. she goes on patrols, works with tribal women, and conducts awareness drives against violence.
+  </p>
+
+  <p>
+    she didn’t escape the fear. she went back to face it — in uniform.
+  </p>
+
+  <p>
+    <i>she is not a symbol of law. she is a promise — that girls from red zones don’t just survive. they lead.</i>
+  </p>
+
+</div>
+
+
+
+
+  </div>
+</body>
+</html>

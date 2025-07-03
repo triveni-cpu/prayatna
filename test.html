@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,4 +21,94 @@
       });
   </script>
 </body>
+=======
+<html>
+  <head>
+    <STYLE>
+      .INTRO{
+        height: fit-content;
+        WIDTH:70%;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+      }
+       ul dt{
+        color:rgb(11, 11, 158);
+
+      }
+      
+      .hover-word{
+cursor: pointer;
+transition: color 0.3s, background-color 0.3s;
+      }
+      .hover-word:hover{
+        background-color: rgb(214, 212, 212);
+        color: rgb(17, 17, 17);
+padding: 2px 4px;
+border-radius:3px;
+      }      
+    </STYLE>
+  </head>
+  <body><DIV CLASS="INTRO">
+    <h2 style="color:rgb(80, 43, 226); ">Group examinations </h2>
+    Group examinations in India are competitive recruitment exams conducted by govt bodies to select candidates for various govt posts. <BR>The term "GROUP" refers to the <mark>classification of posts based on their level of responsibility, authority, pay scale and role within the govt.</mark><br>These are broadly divided into 2 levels. They are:<br>
+  <h4 STYLE="color: rgb(255, 68, 0)">  1.State-Level group Examinations<BR>2. Central-Level group Examinations </h4>
+    <DIV CLASS="Info">
+      <DIV CLASS="service">
+       <h5 style="color: RED; font-size: medium;">State-Level Group Examinations</h5>
+       The state-level group examinations are conducted by the <b><mark>State Public  Service Commission (SPSC)</mark></b>  to recruit candidates for state govt jobs. These are generally 
+       classified as:<br><ul>
+      <dt>Group 1 -</dt><dd> Highest-level executive / administrative posts. <br>Example: Deputy Collector, DSP, CTO, RDO, etc..,</dd><br><dt>Group 2 -</dt><dd> Executive / subordinate posts below Group 1. <br>Example: Municipal Commissioner, Sub-Registor, Asst.Commercial Tax Officer(ACTO)etc..,</dd><br><dt>Group 3 -</dt><dd> clerical/ non-executive  posts. <br>Example: panchayat Secretary, junior Employment Officer, Auditor etc..,</dd>
+       <br><dt>Group 4 -</dt><dd>Lower division clerks / Assistants<br> Example: junior Assistant, Typist, Record Assistant,  etc..,</dd></ul> <h4>Conducted By:<br><ul><li>APPSC-Andhra Pradesh Public Service Commission</li><br>
+      <li>TPPSC -Telangana Public Service Commission</li><br>
+      <li>KPSC -Karnataka Public Service Commission</li><br><li>MPPSC -Mizoram Public Service Commission</li><br><li>APSC -Assam Public Service Commission</li><br><li>Goa PSC -Goa Public Service Commission</li><br>
+      <li>TNPSC -Tamil Nadu Public Service Commission</li><br><li>APPSC -Arunachal Pradesh Public Service Commission</li><br> etc..,
+      </ul></h4></DIV>
+      <DIV CLASS="service">
+       <h5 style="color: RED; font-size: medium;">Central-Level Group Examinations</h5>
+       The Central-Level group examinations are conducted by the <b><mark>State Public  Service Commission (SPSC)</mark></b>  to recruit candidates for state govt jobs. These are generally 
+       classified as:<br><ul>
+      <dt>Group 1 -</dt><dd> Highest-level executive / administrative posts. <br>Example: Deputy Collector, DSP, CTO, RDO, etc..,</dd><br><dt>Group 2 -</dt><dd> Executive / subordinate posts below Group 1. <br>Example: Municipal Commissioner, Sub-Registor, Asst.Commercial Tax Officer(ACTO)etc..,</dd><br><dt>Group 3 -</dt><dd> clerical/ non-executive  posts. <br>Example: panchayat Secretary, junior Employment Officer, Auditor etc..,</dd>
+       <br><dt>Group 4 -</dt><dd>Lower division clerks / Assistants<br> Example: junior Assistant, Typist, Record Assistant,  etc..,</dd></ul>
+      </DIV>
+      
+      </DIV>
+      </DIV>
+      <script>
+        
+
+    function wrapWordsInElement(element) {
+      const childNodes = Array.from(element.childNodes);
+
+      childNodes.forEach(node => {
+        if (node.nodeType === 3) {
+          // It's a text node — split and wrap words
+          const words = node.textContent.split(/(\s+)/); // Keep spaces
+          const fragment = document.createDocumentFragment();
+
+          words.forEach(word => {
+            if (word.trim().length === 0) {
+              fragment.appendChild(document.createTextNode(word));
+            } else {
+              const span = document.createElement('span');
+              span.className = 'hover-word';
+              span.textContent = word;
+              fragment.appendChild(span);
+            }
+          });
+
+          node.replaceWith(fragment);
+        } else if (node.nodeType === 1 && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+          wrapWordsInElement(node); // Recurse
+        }
+      });
+    }
+
+    wrapWordsInElement(document.body);
+
+
+
+      </script>
+
+  </body>
+>>>>>>> 9e9291d (Initial commit)
 </html>

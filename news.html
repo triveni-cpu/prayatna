@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 2px solid #ccc;
+      flex-wrap: wrap;
+    }
+
+    .leftlogo, .rightlogo {
+      width: 60px;
+      height: auto;
+    }
+
+    .title {
+      flex: 1;
+      text-align: center;
+      margin-left: -20px;
+      font-size: 35px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 8px;
+    }
+
+    .title > .heading {
+      text-align: center;
+      margin-top: 5px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 5px;
+      font-size: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .logo-left, .logo-right {
+        width: 50px;
+      }
+    }
+
+    .menu {
+      height: 50px;
+      width: 100%;
+      background-color: orangered;
+    }
+
+    .menu > .buttons {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: inherit;
+    }
+
+    .buttons button {
+      background-color: orangered;
+      color: white;
+      border: none;
+      margin: 0 auto;
+      font-size: 15px;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .head {
+      text-align: center;
+      margin-bottom: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .elements {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .elements a {
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: lightgray;
+      color: black;
+      font-weight: bold;
+    }
+
+    .elements a:hover {
+      background-color: darkgray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img style="height:175px;width:150px;" src="leftlogo.png" class="logo-left">
+    <div class="name">
+      <b style="font-size: xx-large; margin-right:auto;">Prayatna</b><br>
+      &emsp;<b><h3>Website</h3></b>
+    </div>
+    <div class="title">
+      <h3 style="color:rgb(4, 4, 65);">UPSC</h3>
+      <div class="heading">Union Public Service Commission</div>
+    </div>
+    <img style="border-radius: 50%; height: 110px; width:110px;box-shadow: 0px 3px 3px 5px grey" src="rightlogo.png">
+  </div><br>
+
+  <div class="menu">
+    <div class="buttons">
+      <button onclick="openPage()">About UPSC</button>
+      <button onclick="openPage2()">Booklist</button>
+      <button onclick="openPage3()">Syllabus</button>
+      <button onclick="openPage4()">Exampattern</button>
+      <button onclick="openPage5()">Current Affairs</button>
+      <button onclick="openPage6()">Motivational Stories</button>
+    </div>
+  </div>
+
+  <script>
+    function openPage() {
+      window.location.href = "about.html";
+    }
+    function openPage2() {
+      window.location.href = "booklist.html";
+    }
+    function openPage3() {
+      window.location.href = "syllabus.html";
+    }
+    function openPage4() {
+      window.location.href = "exampattern.html";
+    }
+    function openPage5() {
+      window.location.href = "news.html";
+    }
+   function openPage6() {
+      window.location.href = "stories.html";
+    }
+  </script>
+
+  <div class="container">
+    <div class="head">
+      <h1 style=" margin-bottom:15px ; margin-top:20px; color:rgb(10, 10, 107) ; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">VARIOUS SOURCES OF CURRENT AFFAIRS</h1>
+    </div><br>
+    <p style="color: rgb(16, 16, 141); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;"><b>Click the below links to access current affairs from various sources.</b></p><br>
+    
+    <div class="elements">
+      <a href="https://triveni-cpu.github.io/upsc6/index.html" target="_blank" style="background-color: rgba(252, 125, 79, 0.933); color: black;">
+        4 Important Websites For Current Affairs
+      </a>
+      <a href="https://triveni-cpu.github.io/upsc5/index.html" target="_blank">
+        Affairs Cloud Current Affairs
+      </a>
+      <a href="https://triveni-cpu.github.io/upsc7/index.html" target="_blank" style="background-color: rgb(39, 214, 39); color:black;">
+        NEWS Papers & Govt. Publications
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
