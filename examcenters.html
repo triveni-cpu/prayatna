@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <title>UPSC Exam Centres in India</title>
   <style>
-    
     * {
       margin: 0;
       padding: 0;
-     
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
     }
 
     .header {
@@ -21,7 +21,7 @@
       align-items: center;
       padding: 10px 20px;
       border-bottom: 2px solid #ccc;
-      flex-wrap: wrap; /* allows wrapping on small screens */
+      flex-wrap: wrap;
     }
 
     .leftlogo, .rightlogo {
@@ -34,60 +34,55 @@
       text-align: center;
       margin-left: -20px;
       font-size: 35px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-family: Cambria, serif;
       letter-spacing: 8px;
     }
 
-    .title>.heading {
+    .title > .heading {
       text-align: center;
-      
       margin-top: 5px;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        letter-spacing: 5px;
-        font-size: 25px;
+      font-family: Cambria, serif;
+      letter-spacing: 5px;
+      font-size: 25px;
     }
 
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: row;
-        justify-content: center;
-      }
-
-      .logo-left, .logo-right {
-        width: 50px;
-      }}
-      .menu{
-              height: 50px;
-              width: 100%;
-              background-color:orangered ;
-                }
-                .menu>div{
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                height:inherit;
-                
-                }
-                .buttons button{
-                    background-color: orangered;
-                    color:white;
-                    border: none;
-                    margin:0 auto;
-                    font-size:15px;
-                }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 20px;
+    .menu {
+      height: 50px;
+      width: 100%;
+      background-color: orangered;
     }
+
+    .menu > div {
+      display: flex;
+      flex-wrap: wrap;
+      height: inherit;
+    }
+
+    .buttons button {
+      background-color: orangered;
+      color: white;
+      border: none;
+      margin: 0 auto;
+      font-size: 15px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
     h1 {
       text-align: center;
       color: #2b4162;
+      font-family: Cambria, serif;
     }
+
+    p.note {
+      color: red;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
     .accordion {
       background-color: #fff;
-      color:black;
+      color: red;
       cursor: pointer;
       padding: 15px 20px;
       width: 100%;
@@ -97,39 +92,44 @@
       font-size: 18px;
       transition: 0.3s;
       border-bottom: 1px solid #ccc;
-      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+      font-family: Cambria, serif;
     }
+
     .accordion:hover {
       background-color: rgb(212, 212, 244);
     }
+
     .accordion.active {
       background-color: whitesmoke;
-      color: black;
     }
+
     .panel {
       padding: 0 20px 15px;
       background-color: white;
       display: none;
       overflow: hidden;
     }
-    ul {
+
+    .panel ul {
       margin: 10px 0;
       padding-left: 20px;
     }
+
     li.both {
-  color: #062f46;
-  font-weight: bold;
-  background-color: rgb(191, 251, 191);     /* 💡 highlight background */
-  width: 300px;                  /* 💡 fixed width */
-  padding: 4px;
-  border-radius: 5px;
-  margin-bottom: 8px;
-  display: inline-block;         /* 💡 allows width to take effect */
-}
+      color: #062f46;
+      font-weight: bold;
+      background-color: rgb(191, 251, 191);
+      width: 300px;
+      padding: 4px;
+      border-radius: 5px;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
 
     .panel li {
       margin-bottom: 8px;
     }
+
     .tag {
       background: #dbeafe;
       color: #1e3a8a;
@@ -141,130 +141,110 @@
   </style>
 </head>
 <body>
-   <div class="header">
-    <img style="height:175px;width:150px;"src="leftlogo.png" class="logo-left">
-    <div class="name"><b style="font-size: xx-large; margin-right:auto;">Prayatna</b><br>&emsp;<b><h3>Website</h3></b></div>
-    <div class="title"><h3 style="color:rgb(4, 4, 65);">UPSC</h3><div class="heading">Union Public Service Commission</div></div>
+
+  <div class="header">
+    <img style="height:175px;width:150px;" src="leftlogo.png" class="logo-left">
+    <div class="name">
+      <b style="font-size: xx-large; margin-right:auto;">Prayatna</b><br>
+      &emsp;<b><h3>Website</h3></b>
+    </div>
+    <div class="title">
+      <h3 style="color:rgb(4, 4, 65);">UPSC</h3>
+      <div class="heading">Union Public Service Commission</div>
+    </div>
     <img style="border-radius: 50%; height: 110px; width:110px;box-shadow: 0px 3px 3px 5px grey" src="rightlogo.png">
-    
-  </div><br>
-  <div  class="menu">
-   <div class="buttons">
-    <button onclick="openPage()">About UPSC</button>
-  <script>
-    function openPage(){
-      window.location.href="about.html";
-    }
-  </script>
-  <button onclick="openPage2()">Booklist</button>
-  <script>
-    function openPage2() {
-      window.location.href="booklist.html";
-    }
-  </script>
-   <button onclick="openPage3()">Syllabus</button>
-  <script>
-    function openPage3() {
-      window.location.href="syllabus.html";
-    }
-  </script>
-  <button onclick="openPage4()">Exampattern</button>
-  <script>
-    function openPage4() {
-      window.location.href="exampattern.html";
-    }
-  </script>
-  <button onclick="openPage5()">Current Affairs</button>
-  <script>
-    function openPage5() {
-      window.location.href="news.html";
-    }
-  </script>
-
-<button onclick="openPage7()">Exam Centers</button>
-  <script>
-    function openPage7() {
-      window.location.href="examcenters.html";
-    }
-  </script>
-     
-  <button onclick="openPage6()">Motivational Stories</button>
-  <script>
-    function openPage6() {
-      window.location.href="stories.html";
-    }
-  </script>
-  
   </div><br>
 
-<h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">UPSC Exam Centres (Prelims & Mains)</h1><br>
- <p style="color: RED; margin-right="20px;"><b>NOTE :</b> UPSC does not have permanent exam centres . Instead, it conducts Prelims and Mains exams in selected schools, government colleges, and institutions across designated cities. The exact venue is informed through the admit card released a few weeks before the exam.</p><br>
-  
-<h3>Click the below buttons to get the cities of examination.</h3>
+  <div class="menu">
+    <div class="buttons">
+      <button onclick="window.location.href='about.html'">About UPSC</button>
+      <button onclick="window.location.href='booklist.html'">Booklist</button>
+      <button onclick="window.location.href='syllabus.html'">Syllabus</button>
+      <button onclick="window.location.href='exampattern.html'">Exam Pattern</button>
+      <button onclick="window.location.href='news.html'">Current Affairs</button>
+      <button onclick="window.location.href='examcenters.html'">Exam Centers</button>
+      <button onclick="window.location.href='stories.html'">Motivational Stories</button>
+    </div>
+  </div><br>
 
-<!-- BEGIN STATES LIST -->
-<script>
-const states = new Map([
-  ["Andhra Pradesh", [
-    ["Anantapur", "Prelims"], ["Guntur", "Prelims"], ["Kurnool", "Prelims"], ["Nellore", "Prelims"],
-    ["Rajahmundry", "Prelims"], ["Tirupati", "Prelims"], ["Vijayawada", "Prelims & Mains"], ["Visakhapatnam", "Prelims"]
-  ]],
-  ["Arunachal Pradesh", [["Itanagar", "Prelims"]]],
-  ["Assam", [["Dispur", "Prelims & Mains"], ["Jorhat", "Prelims"], ["Silchar", "Prelims"]]],
-  ["Bihar", [["Gaya", "Prelims"], ["Patna", "Prelims & Mains"]]],
-  ["Chandigarh (UT)", [["Chandigarh", "Prelims & Mains"]]],
-  ["Chhattisgarh", [["Bilaspur", "Prelims"], ["Raipur", "Prelims & Mains"]]],
-  ["Delhi (NCT)", [["Delhi", "Prelims & Mains"]]],
-  ["Goa", [["Panaji", "Prelims"]]],
-  ["Gujarat", [["Ahmedabad", "Prelims & Mains"], ["Rajkot", "Prelims"], ["Surat", "Prelims"], ["Vadodara", "Prelims"]]],
-  ["Haryana", [["Faridabad", "Prelims"], ["Gurgaon", "Prelims"]]],
-  ["Himachal Pradesh", [["Dharwar", "Prelims"], ["Mandi", "Prelims"], ["Shimla", "Prelims"]]],
-  ["Jammu & Kashmir", [["Jammu", "Prelims"], ["Srinagar", "Prelims"]]],
-  ["Jharkhand", [["Dhanbad", "Prelims"], ["Ranchi", "Prelims & Mains"]]],
-  ["Karnataka", [["Bengaluru", "Prelims & Mains"], ["Dharwad", "Prelims"], ["Mangaluru", "Prelims"], ["Mysuru", "Prelims"]]],
-  ["Kerala", [["Ernakulam", "Prelims"], ["Kozhikode", "Prelims"], ["Thiruvananthapuram", "Prelims & Mains"]]],
-  ["Ladakh", [["Leh", "Prelims"]]],
-  ["Madhya Pradesh", [["Bhopal", "Prelims & Mains"], ["Gwalior", "Prelims"], ["Indore", "Prelims"], ["Jabalpur", "Prelims"]]],
-  ["Maharashtra", [["Aurangabad", "Prelims"], ["Mumbai", "Prelims & Mains"], ["Nagpur", "Prelims"], ["Navi Mumbai", "Prelims"], ["Pune", "Prelims"], ["Thane", "Prelims"]]],
-  ["Manipur", [["Imphal", "Prelims"]]],
-  ["Meghalaya", [["Shillong", "Prelims & Mains"]]],
-  ["Mizoram", [["Aizawl", "Prelims & Mains"]]],
-  ["Nagaland", [["Kohima", "Prelims"]]],
-  ["Odisha", [["Balasore", "Prelims"], ["Berhampur", "Prelims"], ["Bhubaneswar", "Prelims"], ["Cuttack", "Prelims"], ["Sambalpur", "Prelims"]]],
-  ["Puducherry (UT)", [["Puducherry", "Prelims"]]],
-  ["Punjab", [["Amritsar", "Prelims"], ["Ludhiana", "Prelims"]]],
-  ["Rajasthan", [["Ajmer", "Prelims"], ["Bikaner", "Prelims"], ["Jaipur", "Prelims & Mains"], ["Jodhpur", "Prelims"], ["Udaipur", "Prelims"]]],
-  ["Sikkim", [["Gangtok", "Prelims"]]],
-  ["Tamil Nadu", [["Chennai", "Prelims & Mains"], ["Coimbatore", "Prelims"], ["Madurai", "Prelims"], ["Tiruchirappalli", "Prelims"], ["Vellore", "Prelims"]]],
-  ["Telangana", [["Hyderabad", "Prelims & Mains"], ["Warangal", "Prelims"]]],
-  ["Tripura", [["Agartala", "Prelims"]]],
-  ["Uttar Pradesh", [["Agra", "Prelims"], ["Aligarh", "Prelims"], ["Bareilly", "Prelims"], ["Ghaziabad", "Prelims"], ["Gorakhpur", "Prelims"], ["Jhansi", "Prelims"], ["Lucknow", "Prelims & Mains"], ["Meerut", "Prelims"], ["Prayagraj (Allahabad)", "Prelims & Mains"], ["Varanasi", "Prelims"], ["Gautam Buddha Nagar", "Prelims"]]],
-  ["Uttarakhand", [["Dehradun", "Prelims"], ["Haldwani", "Prelims"]]],
-  ["West Bengal", [["Hooghly", "Prelims"], ["Kolkata", "Prelims & Mains"], ["Siliguri", "Prelims"]]]
-]);
+  <h1>UPSC Exam Centres (Prelims & Mains)</h1><br>
+  <p class="note">NOTE: UPSC does not have permanent exam centres. Instead, it conducts Prelims and Mains exams in selected schools, government colleges, and institutions across designated cities. The exact venue is informed through the admit card released a few weeks before the exam.</p>
 
-states.forEach((cities, state) => {
-  document.write(`<button class='accordion'>${state}</button>`);
-  document.write(`<div class='panel'><ul>`);
-  for (const [city, tag] of cities) {
-    const specialClass = tag === "Prelims & Mains" ? "both" : "";
-    document.write(`<li class="${specialClass}">${city} <span class='tag'>${tag}</span></li>`);
-  }
-  document.write(`</ul></div>`);
-});
-</script>
-<!-- END STATES LIST -->
+  <h3>Click the below buttons to get the cities of examination.</h3><br>
 
-<script>
-  const acc = document.querySelectorAll(".accordion");
-  acc.forEach(button => {
-    button.addEventListener("click", function () {
-      this.classList.toggle("active");
-      const panel = this.nextElementSibling;
-      panel.style.display = panel.style.display === "block" ? "none" : "block";
+  <div id="accordion-container"></div>
+
+  <script>
+    const states = new Map([
+      ["Andhra Pradesh", [["Anantapur", "Prelims"], ["Guntur", "Prelims"], ["Kurnool", "Prelims"], ["Nellore", "Prelims"], ["Rajahmundry", "Prelims"], ["Tirupati", "Prelims"], ["Vijayawada", "Prelims & Mains"], ["Visakhapatnam", "Prelims"]]],
+      ["Arunachal Pradesh", [["Itanagar", "Prelims"]]],
+      ["Assam", [["Dispur", "Prelims & Mains"], ["Jorhat", "Prelims"], ["Silchar", "Prelims"]]],
+      ["Bihar", [["Gaya", "Prelims"], ["Patna", "Prelims & Mains"]]],
+      ["Chandigarh (UT)", [["Chandigarh", "Prelims & Mains"]]],
+      ["Chhattisgarh", [["Bilaspur", "Prelims"], ["Raipur", "Prelims & Mains"]]],
+      ["Delhi (NCT)", [["Delhi", "Prelims & Mains"]]],
+      ["Goa", [["Panaji", "Prelims"]]],
+      ["Gujarat", [["Ahmedabad", "Prelims & Mains"], ["Rajkot", "Prelims"], ["Surat", "Prelims"], ["Vadodara", "Prelims"]]],
+      ["Haryana", [["Faridabad", "Prelims"], ["Gurgaon", "Prelims"]]],
+      ["Himachal Pradesh", [["Dharwar", "Prelims"], ["Mandi", "Prelims"], ["Shimla", "Prelims"]]],
+      ["Jammu & Kashmir", [["Jammu", "Prelims"], ["Srinagar", "Prelims"]]],
+      ["Jharkhand", [["Dhanbad", "Prelims"], ["Ranchi", "Prelims & Mains"]]],
+      ["Karnataka", [["Bengaluru", "Prelims & Mains"], ["Dharwad", "Prelims"], ["Mangaluru", "Prelims"], ["Mysuru", "Prelims"]]],
+      ["Kerala", [["Ernakulam", "Prelims"], ["Kozhikode", "Prelims"], ["Thiruvananthapuram", "Prelims & Mains"]]],
+      ["Ladakh", [["Leh", "Prelims"]]],
+      ["Madhya Pradesh", [["Bhopal", "Prelims & Mains"], ["Gwalior", "Prelims"], ["Indore", "Prelims"], ["Jabalpur", "Prelims"]]],
+      ["Maharashtra", [["Aurangabad", "Prelims"], ["Mumbai", "Prelims & Mains"], ["Nagpur", "Prelims"], ["Navi Mumbai", "Prelims"], ["Pune", "Prelims"], ["Thane", "Prelims"]]],
+      ["Manipur", [["Imphal", "Prelims"]]],
+      ["Meghalaya", [["Shillong", "Prelims & Mains"]]],
+      ["Mizoram", [["Aizawl", "Prelims & Mains"]]],
+      ["Nagaland", [["Kohima", "Prelims"]]],
+      ["Odisha", [["Balasore", "Prelims"], ["Berhampur", "Prelims"], ["Bhubaneswar", "Prelims"], ["Cuttack", "Prelims"], ["Sambalpur", "Prelims"]]],
+      ["Puducherry (UT)", [["Puducherry", "Prelims"]]],
+      ["Punjab", [["Amritsar", "Prelims"], ["Ludhiana", "Prelims"]]],
+      ["Rajasthan", [["Ajmer", "Prelims"], ["Bikaner", "Prelims"], ["Jaipur", "Prelims & Mains"], ["Jodhpur", "Prelims"], ["Udaipur", "Prelims"]]],
+      ["Sikkim", [["Gangtok", "Prelims"]]],
+      ["Tamil Nadu", [["Chennai", "Prelims & Mains"], ["Coimbatore", "Prelims"], ["Madurai", "Prelims"], ["Tiruchirappalli", "Prelims"], ["Vellore", "Prelims"]]],
+      ["Telangana", [["Hyderabad", "Prelims & Mains"], ["Warangal", "Prelims"]]],
+      ["Tripura", [["Agartala", "Prelims"]]],
+      ["Uttar Pradesh", [["Agra", "Prelims"], ["Aligarh", "Prelims"], ["Bareilly", "Prelims"], ["Ghaziabad", "Prelims"], ["Gorakhpur", "Prelims"], ["Jhansi", "Prelims"], ["Lucknow", "Prelims & Mains"], ["Meerut", "Prelims"], ["Prayagraj (Allahabad)", "Prelims & Mains"], ["Varanasi", "Prelims"], ["Gautam Buddha Nagar", "Prelims"]]],
+      ["Uttarakhand", [["Dehradun", "Prelims"], ["Haldwani", "Prelims"]]],
+      ["West Bengal", [["Hooghly", "Prelims"], ["Kolkata", "Prelims & Mains"], ["Siliguri", "Prelims"]]]
+    ]);
+
+    const container = document.getElementById("accordion-container");
+
+    states.forEach((cities, state) => {
+      const button = document.createElement("button");
+      button.className = "accordion";
+      button.textContent = state;
+      container.appendChild(button);
+
+      const panel = document.createElement("div");
+      panel.className = "panel";
+      const ul = document.createElement("ul");
+
+      cities.forEach(([city, tag]) => {
+        const li = document.createElement("li");
+        if (tag === "Prelims & Mains") li.className = "both";
+        li.innerHTML = `${city} <span class="tag">${tag}</span>`;
+        ul.appendChild(li);
+      });
+
+      panel.appendChild(ul);
+      container.appendChild(panel);
     });
-  });
-</script>
+
+    window.onload = () => {
+      const acc = document.querySelectorAll(".accordion");
+      acc.forEach(btn => {
+        btn.addEventListener("click", function () {
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+      });
+    };
+  </script>
 
 </body>
 </html>
