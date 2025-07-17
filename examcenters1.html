@@ -9,12 +9,7 @@
       padding: 0;
     }
 
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-    }
+    
 
     .header {
       display: flex;
@@ -23,6 +18,11 @@
       padding: 10px 20px;
       border-bottom: 2px solid #ccc;
       flex-wrap: wrap;
+    }
+
+    .leftlogo, .rightlogo {
+      width: 60px;
+      height: auto;
     }
 
     .title {
@@ -37,9 +37,20 @@
     .title > .heading {
       text-align: center;
       margin-top: 5px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       letter-spacing: 5px;
       font-size: 25px;
-      font-family: inherit;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .logo-left, .logo-right {
+        width: 50px;
+      }
     }
 
     .menu {
@@ -53,26 +64,17 @@
       flex-direction: row;
       flex-wrap: wrap;
       height: inherit;
-      align-items: center;
-      justify-content: center;
     }
 
     .buttons button {
       background-color: orangered;
       color: white;
       border: none;
-      margin: 0 10px;
+      margin: 0 auto;
       font-size: 15px;
       padding: 10px 15px;
-      border-radius: 5px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
-
-    .buttons button:hover {
-      background-color: #e63900;
-    }
-
     h1 {
       text-align: center;
       color: #2b4162;
