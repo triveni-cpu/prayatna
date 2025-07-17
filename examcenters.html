@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UPSC Exam Centres in India</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2b4162;
+    }
+    .accordion {
+      background-color: #fff;
+      color:black;
+      cursor: pointer;
+      padding: 15px 20px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: 0.3s;
+      border-bottom: 1px solid #ccc;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    }
+    .accordion:hover {
+      background-color: rgb(212, 212, 244);
+    }
+    .accordion.active {
+      background-color: whitesmoke;
+      color: black;
+    }
+    .panel {
+      padding: 0 20px 15px;
+      background-color: white;
+      display: none;
+      overflow: hidden;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    li.both {
+  color: #062f46;
+  font-weight: bold;
+  background-color: rgb(191, 251, 191);     /* 💡 highlight background */
+  width: 300px;                  /* 💡 fixed width */
+  padding: 4px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  display: inline-block;         /* 💡 allows width to take effect */
+}
+
+    .panel li {
+      margin-bottom: 8px;
+    }
+    .tag {
+      background: #dbeafe;
+      color: #1e3a8a;
+      font-size: 12px;
+      padding: 2px 6px;
+      border-radius: 5px;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">UPSC Exam Centres (Prelims & Mains)</h1><br>
+ <p style="color: RED; margin-right="20px;"><b>NOTE :</b> UPSC does not have permanent exam centres . Instead, it conducts Prelims and Mains exams in selected schools, government colleges, and institutions across designated cities. The exact venue is informed through the admit card released a few weeks before the exam.</p><br>
+  
+<h3>Click the below buttons to get the cities of examination.</h3>
+
+<!-- BEGIN STATES LIST -->
+<script>
+const states = new Map([
+  ["Andhra Pradesh", [
+    ["Anantapur", "Prelims"], ["Guntur", "Prelims"], ["Kurnool", "Prelims"], ["Nellore", "Prelims"],
+    ["Rajahmundry", "Prelims"], ["Tirupati", "Prelims"], ["Vijayawada", "Prelims & Mains"], ["Visakhapatnam", "Prelims"]
+  ]],
+  ["Arunachal Pradesh", [["Itanagar", "Prelims"]]],
+  ["Assam", [["Dispur", "Prelims & Mains"], ["Jorhat", "Prelims"], ["Silchar", "Prelims"]]],
+  ["Bihar", [["Gaya", "Prelims"], ["Patna", "Prelims & Mains"]]],
+  ["Chandigarh (UT)", [["Chandigarh", "Prelims & Mains"]]],
+  ["Chhattisgarh", [["Bilaspur", "Prelims"], ["Raipur", "Prelims & Mains"]]],
+  ["Delhi (NCT)", [["Delhi", "Prelims & Mains"]]],
+  ["Goa", [["Panaji", "Prelims"]]],
+  ["Gujarat", [["Ahmedabad", "Prelims & Mains"], ["Rajkot", "Prelims"], ["Surat", "Prelims"], ["Vadodara", "Prelims"]]],
+  ["Haryana", [["Faridabad", "Prelims"], ["Gurgaon", "Prelims"]]],
+  ["Himachal Pradesh", [["Dharwar", "Prelims"], ["Mandi", "Prelims"], ["Shimla", "Prelims"]]],
+  ["Jammu & Kashmir", [["Jammu", "Prelims"], ["Srinagar", "Prelims"]]],
+  ["Jharkhand", [["Dhanbad", "Prelims"], ["Ranchi", "Prelims & Mains"]]],
+  ["Karnataka", [["Bengaluru", "Prelims & Mains"], ["Dharwad", "Prelims"], ["Mangaluru", "Prelims"], ["Mysuru", "Prelims"]]],
+  ["Kerala", [["Ernakulam", "Prelims"], ["Kozhikode", "Prelims"], ["Thiruvananthapuram", "Prelims & Mains"]]],
+  ["Ladakh", [["Leh", "Prelims"]]],
+  ["Madhya Pradesh", [["Bhopal", "Prelims & Mains"], ["Gwalior", "Prelims"], ["Indore", "Prelims"], ["Jabalpur", "Prelims"]]],
+  ["Maharashtra", [["Aurangabad", "Prelims"], ["Mumbai", "Prelims & Mains"], ["Nagpur", "Prelims"], ["Navi Mumbai", "Prelims"], ["Pune", "Prelims"], ["Thane", "Prelims"]]],
+  ["Manipur", [["Imphal", "Prelims"]]],
+  ["Meghalaya", [["Shillong", "Prelims & Mains"]]],
+  ["Mizoram", [["Aizawl", "Prelims & Mains"]]],
+  ["Nagaland", [["Kohima", "Prelims"]]],
+  ["Odisha", [["Balasore", "Prelims"], ["Berhampur", "Prelims"], ["Bhubaneswar", "Prelims"], ["Cuttack", "Prelims"], ["Sambalpur", "Prelims"]]],
+  ["Puducherry (UT)", [["Puducherry", "Prelims"]]],
+  ["Punjab", [["Amritsar", "Prelims"], ["Ludhiana", "Prelims"]]],
+  ["Rajasthan", [["Ajmer", "Prelims"], ["Bikaner", "Prelims"], ["Jaipur", "Prelims & Mains"], ["Jodhpur", "Prelims"], ["Udaipur", "Prelims"]]],
+  ["Sikkim", [["Gangtok", "Prelims"]]],
+  ["Tamil Nadu", [["Chennai", "Prelims & Mains"], ["Coimbatore", "Prelims"], ["Madurai", "Prelims"], ["Tiruchirappalli", "Prelims"], ["Vellore", "Prelims"]]],
+  ["Telangana", [["Hyderabad", "Prelims & Mains"], ["Warangal", "Prelims"]]],
+  ["Tripura", [["Agartala", "Prelims"]]],
+  ["Uttar Pradesh", [["Agra", "Prelims"], ["Aligarh", "Prelims"], ["Bareilly", "Prelims"], ["Ghaziabad", "Prelims"], ["Gorakhpur", "Prelims"], ["Jhansi", "Prelims"], ["Lucknow", "Prelims & Mains"], ["Meerut", "Prelims"], ["Prayagraj (Allahabad)", "Prelims & Mains"], ["Varanasi", "Prelims"], ["Gautam Buddha Nagar", "Prelims"]]],
+  ["Uttarakhand", [["Dehradun", "Prelims"], ["Haldwani", "Prelims"]]],
+  ["West Bengal", [["Hooghly", "Prelims"], ["Kolkata", "Prelims & Mains"], ["Siliguri", "Prelims"]]]
+]);
+
+states.forEach((cities, state) => {
+  document.write(`<button class='accordion'>${state}</button>`);
+  document.write(`<div class='panel'><ul>`);
+  for (const [city, tag] of cities) {
+    const specialClass = tag === "Prelims & Mains" ? "both" : "";
+    document.write(`<li class="${specialClass}">${city} <span class='tag'>${tag}</span></li>`);
+  }
+  document.write(`</ul></div>`);
+});
+</script>
+<!-- END STATES LIST -->
+
+<script>
+  const acc = document.querySelectorAll(".accordion");
+  acc.forEach(button => {
+    button.addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>
